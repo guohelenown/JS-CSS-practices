@@ -1,0 +1,61 @@
+<!DOCTYPE html5>
+<head>
+<!-- Responsive Web Design with HTML5 and CSS3 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+<title>JS/CSS practice 2</title>
+<style>
+
+	.CenterMe {
+		display: flex;
+		align-items: center;		/* horizon align */
+		justify-content: center; 	/* vertical align */
+		height: 200px;
+		background: grey;
+	}
+	
+	.flexitems {
+		border: 1px solid black;
+		display: flex;
+	}
+	
+	.item1 {
+		flex: 2;
+		border: 1px solid black;
+	}
+	
+	.item2,.item3 {
+		flex: 1;
+		border: 1px solid black;
+	}
+
+	/* word-wrap: break-word; just break long word */
+	
+	.truncate {
+		width: 100px;
+		border: 1px solid black;
+		text-overflow: ellipsis;
+		overflow: hidden;
+		white-space: nowrap;
+	}
+	
+	/* width: calc(50% - 10px); half the width of the parent element minus exactly 10px */
+	
+	
+</style>
+</head>
+<body>
+<!-- center the text in div by using flexbox-->
+<div class="CenterMe">
+	Center me!
+</div>
+
+<!-- arrange 3 divs with the max height -->
+<div class="flexitems">
+	<div class="item1">item 1</div>
+	<div class="item2">item 2item 2item 2item 2item 2item 2item 2item 2item 2item 2item 2item 2item 2item 2item 2item 2item 2item 2item 2item 2item 2item 2item 2item 2item 2item 2item 2item 2item 2item 2item 2item 2item 2item 2item 2item 2item 2item 2item 2item 2item 2item 2item 2item 2</div>
+	<div class="item3">item 3</div>
+</div>
+
+<p class="truncate">OK, listen up, I've figured out the key eternal happiness. All you need to do is eat lots of scones. </p>
+
+</body>
