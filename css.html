@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS/CSS practice 1</title>
+  <style>
+  * {
+	margin; 0;
+	padding: 0;
+  }
+	div.first {
+	  margin: 120px 120px;
+	  width: 200px;
+	  height: 200px;
+	  text-transform: uppercase;
+	  position: relative;
+	 
+	  text-shadow: 1px 1px 1px black;
+	  background: linear-gradient(white, red);
+	  box-shadow: 0 0 0 5px black, 0 0 0 15px white, 0 0 0 20px black;
+	}
+
+	p {
+	  margin: 0;
+	  padding: 0;
+	  position: absolute;
+	  left: 50%;
+	  top: 50%;
+	  /*margin-right: -50%;*/
+	  transform: translate(-50%, -50%);
+	}
+	
+	div#float {
+		width: 1200px;
+		margin: 0 auto;
+		
+	}
+	
+	#float ul {
+		background: lightgrey;
+	}
+	
+	div#float, #float ul {
+		overflow: auto;
+	}
+	
+	#float ul li {
+		list-style:none;
+		float: left;
+		
+		width: 18%;
+		margin: 1%;
+		padding: 10px 0;
+		background: grey;
+	}
+	
+	#float ul li {
+		text-align: center;
+	}
+	
+	nav ul li {
+		/*display: inline;*/
+		float: left;
+		list-style: none;
+		padding: 10px;
+	}
+	
+	.flex-container {
+	
+	  width: 200px;
+	  display: flex;
+	}
+	
+	.flex-container div {
+		margin: 2px;
+	}
+	
+	.flex-container .div1 {
+	  flex: 1;
+	}
+	
+	.flex-container .div2 {
+	  flex: 1;
+	}
+	
+	.flex-container .div3 {
+	  flex: 3;
+	}
+	
+	
+	
+	
+  </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>	
+</head>
+<body>
+
+  <div class="first">
+    <p>test</p>
+  </div>  
+  
+  <form action="">
+	<label>Name: <input type="text" name="username"></label><br>
+	
+	<input type="radio" name='sex' value="male" checked> M
+	<input type="radio" name='sex' value="female"> F<br>
+	
+	<input type="checkbox" name='agreement'> Agree it before submit!<br>
+	<input type="checkbox" name='agreement1'> Agree it before submit!<br>
+	<button>submit</button>
+	
+	
+  </form>
+  
+  <div class='flex-container'>
+	<div style="background-color:coral;" class="div1">RED</div>
+	<div style="background-color:lightblue;" class="div2">BLUE</div>  
+	<div style="background-color:lightgreen;" class="div3">Green div with more content.Green div with more content.Green div with more content.Green div with more content.Green div with more content.Green div with more content.</div>
+  </div>
+  
+  
+  
+  <div id="float">
+	  <ul>
+		<li><a href="google.com">nav1</a></li>
+		<li><a>nav1</a></li>
+		<li><a>nav1</a></li>
+		<li><a>nav1</a></li>
+		<li><a>nav1</a></li>
+	  </ul>
+	  
+	  
+  </div>
+  
+ 
+  
+   <nav>
+	  <ul>
+		<li><a href="google.com">nav1</a></li>
+		<li><a>nav1</a></li>
+		<li><a>nav1</a></li>
+		<li><a>nav1</a></li>
+		<li><a>nav1</a></li>
+	  </ul>
+	  
+	  
+  </nav>
+  
+  
+  <script>
+	$(function(){
+	
+		$("button").click(function(){
+			var x = $('input[name="sex"]:checked').val();
+			alert(x);
+			
+			var input = $('input[name="username"]').val();
+			alert(input);
+			
+			var checkbox = $('input[name="agreement"]').is(':checked');
+			alert(checkbox);
+			
+			var checkbox1 = $('input[name="agreement1"]').is(':checked');
+			alert(checkbox1);
+		});
+		
+	});
+  </script>
+  
+</body>
+</html>
